@@ -3,9 +3,9 @@ import html2canvas from "html2canvas";
 export const SHARE_STORY_W = 390;
 export const SHARE_STORY_H = 844;
 export const SHARE_STORY_PADDING = "52px 28px 12px";
-export const SHARE_CAPTURE_BG = "#1A1A1A";
-export const SHARE_PNG_FILENAME = "fanstories-2025.png";
-export const SHARE_SHEET_TITLE = "My 2025 Harvest";
+export const SHARE_CAPTURE_BG = "#FFFFFF";
+export const SHARE_PNG_FILENAME = "stylemark-lookback-2025.png";
+export const SHARE_SHEET_TITLE = "My StyleMark Lookback 2025";
 
 /** Host styles while off-screen — never use low opacity (html2canvas captures it as nearly black). */
 export function getShareCaptureHostStyle() {
@@ -73,7 +73,7 @@ export function pixelsHaveVisibleContent(
   data,
   width,
   height,
-  backgroundRgb = [26, 26, 26],
+  backgroundRgb = [255, 255, 255],
   minDistinctRatio = 0.008
 ) {
   if (!data?.length || !width || !height) return false;
@@ -97,7 +97,7 @@ export function pixelsHaveVisibleContent(
   return distinct / total >= minDistinctRatio;
 }
 
-export function captureCanvasHasVisibleContent(canvas, backgroundRgb = [26, 26, 26], minDistinctRatio = 0.008) {
+export function captureCanvasHasVisibleContent(canvas, backgroundRgb = [255, 255, 255], minDistinctRatio = 0.008) {
   const ctx = canvas.getContext?.("2d");
   if (!ctx) return false;
 

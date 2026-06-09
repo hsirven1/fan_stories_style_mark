@@ -1,4 +1,4 @@
-import { useState, useRef, useId, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
 import {
   SHARE_PNG_FILENAME,
